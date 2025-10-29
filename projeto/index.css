@@ -1,0 +1,267 @@
+   @font-face {
+            font-family: 'pixel';
+            src: url('Pixeled.ttf') format('truetype');
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url(048dc3426e3c4560aaf659643560856f.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            transition: background-image 0.5s ease;
+        }
+
+        /* Menu de navegação */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu button {
+            background-color: #ffcc00;
+            border: none;
+            color: #2a75bb;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .menu button:hover {
+            background-color: #2a75bb;
+            color: #ffcc00;
+            transform: translateY(-2px);
+        }
+
+        /* Conteúdo principal */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: red;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px;
+            text-align: center;
+            font-family: 'pixel', Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .box {
+            display: flex;
+            gap: 50px;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pk,
+        .pk2,
+        .pk3 {
+            width: 200px;
+            height: 200px;
+            background-image: url(pokebola.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pk:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px blue;
+            filter: brightness(1.2);
+        }
+
+        .pk2:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px red;
+            filter: brightness(1.2);
+        }
+
+        .pk3:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px green;
+            filter: brightness(1.2);
+        }
+
+        .coluna:hover p {
+            color: blue;
+            text-shadow: 0 0 10px blue;
+        }
+
+        .coluna2:hover p {
+            color: red;
+            text-shadow: 0 0 10px red;
+        }
+
+        .coluna3:hover p {
+            color: green;
+            text-shadow: 0 0 10px green;
+        }
+
+        img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .pk:hover img,
+        .pk2:hover img,
+        .pk3:hover img {
+            transform: scale(1.1);
+        }
+
+        .coluna,
+        .coluna2,
+        .coluna3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        p {
+            margin-top: 10px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Controle de áudio */
+        #audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Página de informações */
+        .info-page {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-page h2 {
+            color: #2a75bb;
+            text-align: center;
+            font-family: 'pixel', Helvetica, sans-serif;
+        }
+
+        .info-page p {
+            color: #333;
+            text-shadow: none;
+            line-height: 1.6;
+        }
+
+        /* Botão de instalação */
+        #install-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ffcc00;
+            color: #2a75bb;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+            display: none;
+        }
+
+        /* Modal de confirmação */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-buttons {
+            margin-top: 20px;
+        }
+
+        .modal-buttons button {
+            margin: 0 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .confirm-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .cancel-btn {
+            background-color: #f44336;
+            color: white;
+        }

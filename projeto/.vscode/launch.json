@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open projeto3_css_vitor-Moraes.html",
+            "file": "c:\\Users\\vitom\\OneDrive\\Área de Trabalho\\projeto\\projeto\\projeto3_css_vitor-Moraes.html"
+        }
+    ]
+}
