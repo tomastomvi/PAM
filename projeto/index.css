@@ -1,4 +1,161 @@
-   @font-face {
+/* Estilos para o botão de login no menu */
+#login-btn {
+    background: #ffcc00;
+    color: #2a75bb;
+    border: 2px solid #2a75bb;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#login-btn:hover {
+    background: #2a75bb;
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Estilos para o modal de confirmação de Pokémon */
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.confirm-btn {
+    background: #00cc44;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background: #00aa33;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+}
+
+/* Estilos para a página de informações */
+.info-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin-top: 2rem;
+    border: 3px solid #ffde00;
+}
+
+.info-page h2 {
+    color: #2a75bb;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.info-page h3 {
+    color: #cc0000;
+    margin-top: 1.5rem;
+}
+
+.info-content {
+    color: #333;
+    line-height: 1.6;
+}
+
+.info-content ul {
+    margin-left: 2rem;
+}
+
+.info-content li {
+    margin-bottom: 0.5rem;
+}
+
+.back-btn {
+    background: #2a75bb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #1a4a7a;
+    transform: translateY(-2px);
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .modal-buttons {
+        flex-direction: column;
+    }
+    
+    .info-page {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .menu button {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+/* Estados de visibilidade melhorados */
+body:not(.user-logged-in) .main-content {
+    display: none !important;
+}
+
+body.user-logged-in .main-content {
+    display: block;
+}
+
+/* Garantir que o modal de login fique acima de tudo */
+#login-modal {
+    z-index: 1001;
+}
+
+/* Estilo para quando o usuário está como visitante */
+.user-bar.guest {
+    background: rgba(102, 102, 102, 0.95);
+}
+
+.user-bar.guest span {
+    font-style: italic;
+}
+
+
+ @font-face {
             font-family: 'pixel';
             src: url('Pixeled.ttf') format('truetype');
         }

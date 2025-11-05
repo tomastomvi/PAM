@@ -1,3 +1,12 @@
+    // Verificar autenticação para mostrar conteúdo
+firebaseServiceInstance.observarAuthState((user) => {
+  if (user) {
+    document.body.classList.add('user-logged-in');
+  } else {
+    document.body.classList.remove('user-logged-in');
+  }
+});
+  
   // Elementos DOM
         const homeBtn = document.getElementById('home-btn');
         const infoBtn = document.getElementById('info-btn');
