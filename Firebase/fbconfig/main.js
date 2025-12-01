@@ -2,5 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
 
 
-const app = initializeApp(window.firebaseConfig);
-const analytics = getAnalytics(app);
+console.log("Firebase Config:", window.firebaseConfig);
+window.app = initializeApp(window.firebaseConfig);
+
