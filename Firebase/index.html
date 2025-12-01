@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Offline PWA</title>
+  <link rel="stylesheet" href="st/style.css">
+  <link rel="manifest" href="st/manifest.json">
+  <script type="module" src="fbconfig/fbconfig.js"></script>
+  <script type="module" src="fbconfig/main.js"></script>
+
+  <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo</h1>
+    <p>Faça login para continuar</p>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <form class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 — Exemplo Offline PWA</p>
+  </footer>
+
+  <!-- <script>
+   window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./Firebase/sw.js')
+          .then(reg => console.log('SW registrado:', reg.scope))
+          .catch(err => console.error('Falha ao registrar SW:', err));
+      });
+  </script> -->
+</body>
+</html>
+``
+
